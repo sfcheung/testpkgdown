@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   test_mermaid: test_mermaid.html
   test_mermaid_new: test_mermaid_new.html
-last_built: 2023-04-15T19:09Z
+last_built: 2023-04-15T19:19Z
 urls:
   reference: https://sfcheung.github.io/testpkgdown/reference
   article: https://sfcheung.github.io/testpkgdown/articles

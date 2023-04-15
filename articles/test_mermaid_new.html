@@ -82,18 +82,19 @@
 <span>  pattern <span class="op">=</span> <span class="st">"mermaid.*js"</span>,</span>
 <span>  full.names <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
-<span><span class="va">mm_loc_old</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">mm_loc</span>, <span class="st">".old"</span><span class="op">)</span></span>
+<span><span class="va">mm_dir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/basename.html" class="external-link">dirname</a></span><span class="op">(</span><span class="va">mm_loc</span><span class="op">)</span></span>
+<span><span class="va">mm_loc_old</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="va">mm_dir</span>, <span class="st">"mm.old"</span><span class="op">)</span></span>
+<span><span class="va">mm_loc_new</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="va">mm_dir</span>, <span class="st">"mm.new"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.copy</a></span><span class="op">(</span><span class="va">mm_loc</span>, <span class="va">mm_loc_old</span>, overwrite <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span>
 <span><span class="va">mm_url</span> <span class="op">&lt;-</span> <span class="st">"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.0.1/mermaid.min.js"</span></span>
-<span><span class="va">mm_loc_new</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">mm_loc</span>, <span class="st">".new"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="va">mm_url</span>, <span class="va">mm_loc_new</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; [1] TRUE</span></span></code></pre>
-<div class="DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e5b6b3c59493bc64e3fd" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-e5b6b3c59493bc64e3fd">{"x":{"diagram":"\n%%{init: {'theme':'forest'}}%%\nflowchart TD\nclassDef testnode fill:#ff0000,color:#000;\nA:::testnode --> B\nB ==> C\nB --> D{{D}}\nC -.-> E(E)\nD ----> E\n"},"evals":[],"jsHooks":[]}</script>
+<div class="DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c6ac6d6847249a9ab58f" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-c6ac6d6847249a9ab58f">{"x":{"diagram":"\n%%{init: {'theme':'forest'}}%%\nflowchart TD\nclassDef testnode fill:#ff0000,color:#000;\nA:::testnode --> B\nB ==> C\nB --> D{{D}}\nC -.-> E(E)\nD ----> E\n"},"evals":[],"jsHooks":[]}</script>
 #&gt; [1] TRUE
-<div class="DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-ceb920e6e646a00ef8bc" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-ceb920e6e646a00ef8bc">{"x":{"diagram":"\n%%{init: {'theme':'forest'}}%%\nflowchart TD\nclassDef testnode fill:#ff0000,color:#000;\nA:::testnode --> B\nB ==> C\nB --> D{{D}}\nC -.-> E(E)\nD ----> E\n"},"evals":[],"jsHooks":[]}</script></main>
+<div class="DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3c11901e173b8bc4cad7" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-3c11901e173b8bc4cad7">{"x":{"diagram":"\n%%{init: {'theme':'forest'}}%%\nflowchart TD\nclassDef testnode fill:#ff0000,color:#000;\nA:::testnode --> B\nB ==> C\nB --> D{{D}}\nC -.-> E(E)\nD ----> E\n"},"evals":[],"jsHooks":[]}</script></main>
 </div>
 
 
