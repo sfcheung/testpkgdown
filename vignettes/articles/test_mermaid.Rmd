@@ -1,0 +1,27 @@
+---
+title: "test_mermaid"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+library(DiagrammeR)
+```
+
+```{r echo = FALSE}
+mermaid(
+"
+graph TD
+A --> B
+B --> C
+B --> D
+C --> E
+D --> E
+"
+)
+```
