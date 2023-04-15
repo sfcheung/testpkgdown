@@ -1,0 +1,61 @@
+---
+title: "test_mermaid_new"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+library(DiagrammeR)
+```
+
+```{r}
+# Adapted from https://github.com/rich-iannone/DiagrammeR/issues/457#issuecomment-1109995343
+mm_loc <- list.files(
+  find.package("DiagrammeR"),
+  recursive = TRUE,
+  pattern = "mermaid.*js",
+  full.names = TRUE
+)
+mm_loc_old <- paste0(mm_loc, ".old")
+file.copy(mm_loc, mm_loc_old, overwrite = TRUE)
+mm_url <- "https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.0.1/mermaid.min.js"
+mm_loc_new <- paste0(mm_loc, ".new")
+download.file(mm_url, mm_loc_new)
+```
+
+```{r echo = FALSE}
+file.copy(mm_loc_new, mm_loc, overwrite = TRUE)
+mermaid(
+"
+%%{init: {'theme':'forest'}}%%
+flowchart TD
+classDef testnode fill:#ff0000,color:#000;
+A:::testnode --> B
+B ==> C
+B --> D{{D}}
+C -.-> E(E)
+D ----> E
+"
+)
+file.copy(mm_loc_old, mm_loc, overwrite = TRUE)
+```
+
+```{r echo = FALSE}
+mermaid(
+"
+%%{init: {'theme':'forest'}}%%
+flowchart TD
+classDef testnode fill:#ff0000,color:#000;
+A:::testnode --> B
+B ==> C
+B --> D{{D}}
+C -.-> E(E)
+D ----> E
+"
+)
+```
