@@ -21,10 +21,11 @@ mm_loc <- list.files(
   pattern = "mermaid.*js",
   full.names = TRUE
 )
-mm_loc_old <- paste0(mm_loc, ".old")
+mm_dir <- dirname(mm_loc)
+mm_loc_old <- file.path(mm_dir, "mm.old")
+mm_loc_new <- file.path(mm_dir, "mm.new")
 file.copy(mm_loc, mm_loc_old, overwrite = TRUE)
 mm_url <- "https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.0.1/mermaid.min.js"
-mm_loc_new <- paste0(mm_loc, ".new")
 download.file(mm_url, mm_loc_new)
 ```
 
