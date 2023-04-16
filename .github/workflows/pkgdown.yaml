@@ -42,7 +42,7 @@ jobs:
               pattern = "mermaid.*js",
               full.names = TRUE
             )
-          mm_url <- "https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js"
+          mm_url <- "https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.0.1/mermaid.min.js"
           mm_loc_new <- file.path(dirname(mm_loc), "mm_new")
           utils::download.file(mm_url, mm_loc_new)
           file.copy(mm_loc_new, mm_loc, overwrite = TRUE)
