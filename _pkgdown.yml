@@ -1,4 +1,6 @@
 url: https://sfcheung.github.io/testpkgdown/
 template:
   bootstrap: 5
+  includes:
+    in_header: <meta name="google-site-verification" content="0VLBmFnW_UJFI-7gXnORPBsWxqZwmzuGpK-TeVRLBjQ" />
 
